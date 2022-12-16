@@ -26,7 +26,7 @@ router.post('/postCompra', async (req, res) => {
 })
 
 //Get all Method
-router.get('/getAllCompras', async (req, res) => {
+router.get('/getAllCompra', async (req, res) => {
     try{
         const data = await Model.find();
         res.json(data)
