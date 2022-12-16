@@ -21,9 +21,11 @@ app.use(cors());
 
 app.use(express.json());
 
-app.listen(8000, () => {
-    console.log(`Server Started at ${8000}`)
-});
+port = process.env.PORT;
+
+app.listen(port, () => {
+    console.log(`Server Started at ${port}`)
+})
 
 const rutasClientes = require('./routes/rutasClientes');
 const rutasProveedores = require('./routes/rutasProveedores');
