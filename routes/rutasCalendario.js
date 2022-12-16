@@ -43,7 +43,7 @@ router.get("/getByIdCalendario/:id", async (req, res) => {
 
 
 //Update by ID Method
-router.patch("/updatebyIdCalendario/:id", async (req, res) => {
+router.patch("/updateByIdCalendario/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const updatedData = req.body;

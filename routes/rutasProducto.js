@@ -33,7 +33,7 @@ router.post('/postProducto', async (req, res) => {
 })
 
 //Get All Method
-router.get('/getAllProductos', async (req, res) => {
+router.get('/getAllProducto', async (req, res) => {
     try{
         const data = await Model.find();
         res.json(data)
