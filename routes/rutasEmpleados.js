@@ -49,7 +49,7 @@ router.get('/getByIdEmpleado/:id', async (req, res) => {
 })
 
 //Update By Id Method
-router.patch('/getByIdEmpleado/:id', async (req, res) => {
+router.patch('/updateByIdEmpleado/:id', async (req, res) => {
 	try {
 		const id = req.params.id;
 		const updatedData = req.body;
