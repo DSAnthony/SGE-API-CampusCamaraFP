@@ -12,14 +12,12 @@ const dataSchema = new mongoose.Schema({
     nombre: {
         required: true,
         type: String,
-        minLength: [3, 'Must be at least 3'],
-        maxLength: [9, 'Must be less than 9']
+        minLength: [3, 'Must be at least 3']
     },
     apellidos: {
         required: true,
         type: String,
-        minLength: [1, 'Must be at least 1'],
-        maxLength: [100, 'Must be less than 100']
+        minLength: [1, 'Must be at least 1']
     },
     telefono: {
         required: true,
@@ -34,7 +32,7 @@ const dataSchema = new mongoose.Schema({
     direccion: {
         required: true,
         type: String,
-        minLength: [9, 'Must be at least 9']
+        minLength: [6, 'Must be at least 6']
     }
 })
 

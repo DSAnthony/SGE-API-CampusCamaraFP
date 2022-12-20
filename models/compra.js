@@ -10,8 +10,7 @@ const dataSchema = new mongoose.Schema({
     nombre: {
         required: true,
         type: String,
-        minLength: [3, 'Must be at least 3'],
-        maxLength: [50, 'Must be less than 50']
+        minLength: [3, 'Must be at least 3']
     },
     direccion: {
         required: true,

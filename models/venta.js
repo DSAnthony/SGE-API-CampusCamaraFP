@@ -10,14 +10,12 @@ const dataSchema = new mongoose.Schema({    nif: {
     nombre: {
         required: true,
         type: String,
-        minLength: [3, 'Must be at least 3'],
-        maxLength: [9, 'Must be less than 9']
+        minLength: [3, 'Must be at least 3']
     },
     apellidos: {
         required: true,
         type: String,
-        minLength: [15, 'Must be at least 15'],
-        maxLength: [100, 'Must be less than 100']
+        minLength: [15, 'Must be at least 15']
     },
     email: {
         required: true,
@@ -26,7 +24,7 @@ const dataSchema = new mongoose.Schema({    nif: {
     direccion: {
         required: true,
         type: String,
-        minLength: [9, 'Must be at least 9']
+        minLength: [6, 'Must be at least 9']
     },
     fechaVenta: {
         required: true,
