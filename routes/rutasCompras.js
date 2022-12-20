@@ -14,7 +14,7 @@ router.post('/postCompra', async (req, res) => {
         direccion: req.body.direccion,
         telefono: req.body.telefono,
         email: req.body.email,
-        fechaCompra: req.body.fechaCompras,
+        fechaCompra: req.body.fechaCompra,
         precioTotal: req.body.precioTotal,
         observaciones: req.body.observaciones,
         productos: req.body.productos

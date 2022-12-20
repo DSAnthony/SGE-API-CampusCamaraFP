@@ -14,7 +14,8 @@ router.post('/postEmpleado', async (req, res) => {
 		apellidos: req.body.apellidos,
 		telefono: req.body.telefono,
 		email: req.body.email,
-		direccion: req.body.direccion
+		direccion: req.body.direccion,
+		puesto: req.body.puesto
 	})
 	
 	try {
