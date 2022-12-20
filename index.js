@@ -31,12 +31,15 @@ const rutasClientes = require('./routes/rutasClientes');
 const rutasProveedores = require('./routes/rutasProveedores');
 const rutasCompras = require('./routes/rutasCompras');
 const rutasVentas = require('./routes/rutasVentas');
-const rutasProducto = require('./routes/rutasProducto');
+const rutasProductos = require('./routes/rutasProductos');
 const rutasCalendario = require('./routes/rutasCalendario');
+const rutasEmpleados = require('./routes/rutasEmpleados');
+
 
 app.use('/api', rutasClientes)
 app.use('/api', rutasProveedores)
 app.use('/api', rutasCompras)
 app.use('/api', rutasVentas)
-app.use('/api', rutasProducto)
+app.use('/api', rutasProductos)
 app.use('/api', rutasCalendario)
+app.use('/api', rutasEmpleados)

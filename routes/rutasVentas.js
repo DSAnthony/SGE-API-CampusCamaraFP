@@ -9,11 +9,15 @@ const Model = require('../models/venta');
 //Post Method
 router.post('/postVenta', async (req, res) => {
     const data = new Model({
-        idVenta: req.body.idVenta,
-        nombreCliente: req.body.nombreCliente,
+        nif: req.body.nif,
+        nombre: req.body.nombre,
+        apellidos: req.body.apellidos,
+        email: req.body.email,
+        direccion: req.body.direccion,
         fechaVenta: req.body.fechaVenta,
         precioTotal: req.body.precioTotal,
-        observaciones: req.body.observaciones
+        observaciones: req.body.observaciones,
+        productos: req.body.productos
     })
 
     try {

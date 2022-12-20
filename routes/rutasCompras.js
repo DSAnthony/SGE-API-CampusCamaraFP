@@ -9,11 +9,15 @@ const Model = require('../models/compra');
 //Post Method
 router.post('/postCompra', async (req, res) => {
     const data = new Model({
-        idCompra: req.body.idCompra,
-        idProveedor: req.body.idProveedor,
-        fechaCompras: req.body.fechaCompras,
+        cif: req.body.cif,
+        nombre: req.body.nombre,
+        direccion: req.body.direccion,
+        telefono: req.body.telefono,
+        email: req.body.email,
+        fechaCompra: req.body.fechaCompras,
         precioTotal: req.body.precioTotal,
-        observaciones: req.body.observaciones
+        observaciones: req.body.observaciones,
+        productos: req.body.productos
     })
 
     try {

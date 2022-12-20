@@ -18,7 +18,7 @@ const dataSchema = new mongoose.Schema({
     apellidos: {
         required: true,
         type: String,
-        minLength: [1, 'Must be at least 1'],
+        minLength: [1, 'Must be at least 15'],
         maxLength: [100, 'Must be less than 100']
     },
     telefono: {
@@ -35,7 +35,11 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String,
         minLength: [9, 'Must be at least 9']
+    },
+    puesto: {
+        required: true,
+        type: String
     }
 })
 
-module.exports = mongoose.model('Clientes', dataSchema)
+module.exports = mongoose.model('Empleados', dataSchema)
