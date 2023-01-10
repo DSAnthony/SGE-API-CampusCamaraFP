@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 const dataSchema = new mongoose.Schema({
     evento: {
         required: true,
-        type: String,
-        minlength: [2, "Tu evento debe ser más largo"],
-        maxlength: [100, "Tu evento contiene demasiados carácteres"]
+        type: String
     },
     fecha: {
         required: true,

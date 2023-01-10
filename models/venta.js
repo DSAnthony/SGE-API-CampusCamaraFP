@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const dataSchema = new mongoose.Schema({    nif: {
+const dataSchema = new mongoose.Schema({
+    nif: {
         required: true,
         type: String,
         minLength: [9, 'Must be at least 9'],
@@ -9,8 +10,7 @@ const dataSchema = new mongoose.Schema({    nif: {
     },
     nombre: {
         required: true,
-        type: String,
-        minLength: [3, 'Must be at least 3']
+        type: String
     },
     apellidos: {
         required: true,
@@ -23,13 +23,11 @@ const dataSchema = new mongoose.Schema({    nif: {
     },
     direccion: {
         required: true,
-        type: String,
-        minLength: [6, 'Must be at least 9']
+        type: String
     },
     fechaVenta: {
         required: true,
-        type: String,
-        maxlenght: 9
+        type: String
     },
     precioTotal: {
         required: true,
@@ -42,16 +40,14 @@ const dataSchema = new mongoose.Schema({    nif: {
     productos: [{
         nombre: {
             required: [true, '¿Porque sin nombre?'],
-            type: String,
+            type: String
         },
         precioVenta: mongoose.Types.Decimal128,
         tasas: {
             required: true,
-            type: Number,
-            min: [0, 'Must be at least 0, got {VALUE}'],
-            max: [100, 'Cannot be more than 100, got {VALUE}']
+            type: Number
         },
-        descripcion: String,
+        descripcion: String
     }]
 })
 

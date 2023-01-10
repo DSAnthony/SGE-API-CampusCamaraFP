@@ -12,7 +12,7 @@ const productoSchema = new mongoose.Schema({
     proveedor: {
         id: String,
         nombre: String,
-        precioCompra: mongoose.Types.Decimal128,
+        precioCompra: mongoose.Types.Decimal128
             
     },
     precioVenta: mongoose.Types.Decimal128, 
@@ -22,11 +22,9 @@ const productoSchema = new mongoose.Schema({
     },
     tasas: {
         required: true,
-        type: Number,
-        min: [0, 'Must be at least 0, got {VALUE}'],
-        max: [100, 'Cannot be more than 100, got {VALUE}']
+        type: Number
     },
-    descripcion: String,
+    descripcion: String
 })
 
 module.exports = mongoose.model('Producto', productoSchema)
