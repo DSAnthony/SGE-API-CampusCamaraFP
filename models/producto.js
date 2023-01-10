@@ -22,7 +22,9 @@ const productoSchema = new mongoose.Schema({
     },
     tasas: {
         required: true,
-        type: Number
+        type: Number,
+        min: [0, 'Must be at least 0'],
+        max: [100, 'Must be less than 100']
     },
     descripcion: String
 })

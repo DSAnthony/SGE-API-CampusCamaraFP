@@ -5,8 +5,7 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String,
         minLength: [9, 'Must be at least 9'],
-        maxLength: [9, 'Must be less than 9']
-        
+        maxLength: [9, 'Must be less than 9']  
     },
     nombre: {
         required: true,
@@ -14,8 +13,7 @@ const dataSchema = new mongoose.Schema({
     },
     apellidos: {
         required: true,
-        type: String,
-        minLength: [15, 'Must be at least 15']
+        type: String
     },
     email: {
         required: true,
@@ -39,13 +37,15 @@ const dataSchema = new mongoose.Schema({
     },
     productos: [{
         nombre: {
-            required: [true, '¿Porque sin nombre?'],
+            required: true,
             type: String
         },
         precioVenta: mongoose.Types.Decimal128,
         tasas: {
             required: true,
-            type: Number
+            type: Number,
+            min: [0, 'Must be at least 0'],
+            max: [100, 'Must be less than 100']
         },
         descripcion: String
     }]
