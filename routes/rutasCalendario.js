@@ -11,6 +11,8 @@ router.post("/postCalendario", async (req, res) => {
   const data = new Model({
     evento: req.body.evento,
     fecha: req.body.fecha,
+    descripcion: req.body.descripcion
+
   });
 
   try {
