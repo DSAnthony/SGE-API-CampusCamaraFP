@@ -72,7 +72,7 @@ router.patch('/updateByIdProducto/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const updatedData = req.body;
-        const options = { new: true };
+        const options = { new: true, runValidators: true};
 
         const result = await Model.findByIdAndUpdate(
             id, updatedData, options
