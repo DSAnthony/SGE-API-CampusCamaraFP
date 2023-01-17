@@ -19,7 +19,7 @@ const dataSchema = new mongoose.Schema({
     },
     telefono: {
         required: true,
-        type: Number,
+        type: String,
         minLength: [9, 'Must be at least 9'],
         maxLength: [9, 'Must be less than 9']
     },
