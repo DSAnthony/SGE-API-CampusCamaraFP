@@ -19,8 +19,8 @@ const dataSchema = new mongoose.Schema({
     telefono: {
         required: true,
         type: Number,
-        minLength: [9, 'Must be at least 9'],
-        maxLength: [9, 'Must be less than 9']
+        minLength: [8, 'Must be at least 9'],
+        maxLength: [10, 'Must be less than 9']
     },
     email: {
         required: true,
