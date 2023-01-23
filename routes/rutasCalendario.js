@@ -12,7 +12,6 @@ router.post("/postCalendario", async (req, res) => {
     evento: req.body.evento,
     fecha: req.body.fecha,
     descripcion: req.body.descripcion
-
   });
 
   try {
@@ -63,7 +62,7 @@ router.patch("/updateByIdCalendario/:id", async (req, res) => {
 router.delete("/deleteByIdCalendario/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const data = await Modelito.findByIdAndDelete(id);
+    const data = await Model.findByIdAndDelete(id);
     res.send(`Document with ${data.user} has been deleted..`);
   } catch (error) {
     res.status(400).json({ message: error.message });
